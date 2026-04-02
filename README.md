@@ -1,6 +1,6 @@
 # 🌮 Metate — Restaurant POS & Menu System
 
-A production-ready restaurant web application built with React 18 + Vite 5 + Tailwind CSS v3.
+A production-ready restaurant web application built with React 18 + Vite 8 + Tailwind CSS v3.
 
 ## Features
 
@@ -19,7 +19,7 @@ Accessible via the subtle **Admin** button in the bottom-right corner of the men
 - **Catalog tab** — inline product editing (name, description, price, availability)
 
 ## Tech Stack
-- **React 18** + **Vite 5** (JSX, no TypeScript)
+- **React 18** + **Vite 8** (JSX, no TypeScript)
 - **Tailwind CSS v3**
 - No Redux, no heavy charting libraries
 
