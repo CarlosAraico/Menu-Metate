@@ -140,7 +140,7 @@ export const mockBackend = {
     await delay(300);
     const { items, customer, serviceType, tipOverride } = payload;
     if (!items || !items.length) throw new Error("No items provided");
-    const { resolvedItems, subtotal, tip: autoTip, total: autoTotal } = calculateOrderTotals(items);
+    const { resolvedItems, subtotal, tip: autoTip } = calculateOrderTotals(items);
     const tip = tipOverride !== undefined ? Math.round(tipOverride * 100) / 100 : autoTip;
     const total = subtotal + tip;
     const newOrder = {
