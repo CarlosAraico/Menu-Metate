@@ -2,6 +2,7 @@
 // All prices/calculations are authoritative on the "server" side
 
 const MOCK_ADMIN_TOKEN = "admin-token-dev";
+const DEFAULT_TIP_RATE = 0.15;
 
 const catalog = [
   { productId: "P001", name: "Taco de Bistec", description: "Taco con bistec asado, cebolla y cilantro", price: 35, category: "Tacos", available: true },
@@ -112,7 +113,7 @@ function calculateOrderTotals(items) {
     return { productId: item.productId, name: product.name, quantity: qty, unitPrice, lineTotal: unitPrice * qty };
   });
   const subtotal = resolvedItems.reduce((sum, i) => sum + i.lineTotal, 0);
-  const tipRate = 0.15;
+  const tipRate = DEFAULT_TIP_RATE;
   const tip = Math.round(subtotal * tipRate * 100) / 100;
   const total = subtotal + tip;
   return { resolvedItems, subtotal, tip, total };

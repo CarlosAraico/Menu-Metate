@@ -79,7 +79,7 @@ export function AnalyticsTab({ adminToken }) {
 
   const paymentTotal = Object.values(stats.paymentBreakdown || {}).reduce((s, v) => s + v, 0);
 
-  // Simulate hourly data based on today stats
+  // Simulated hourly distribution for demo purposes — replace with real per-hour data from backend
   const hourlyData = Array.from({ length: 8 }, (_, i) => ({
     label: `${8 + i}h`,
     value: Math.random() * (stats.totalSales / 5),
